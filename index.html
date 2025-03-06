@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>CS2</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body onload="updateDots();">
+    <div class="e1313">
+        <p1>Cześć</p1>
+        <h2>Jak miałem już 10 lat zacząłem grać w gre o nazwie Counter-Strike: Global Offensive lecz po roku dostałem<br>permamentnego bana za cheatowanie czyli unfair advantage byłem głupi i cheatowałem w grze lecz<br>w lutym 2025 roku zrobiłem nowe konto i teraz gram bez cheatów</h2>
+        <h3>Oto moje klipy z CS2 (Counter-Strike Global Offensive)</h3>
+    </div>
+    <div class="container">
+        <button class="button left" id="prevBtn" onclick="prevImage()">&#10094;</button>
+        <div class="image-container" id="imageSlider">
+            <video controls>
+                <source src="1.mp4" type="video/mp4">
+            </video>
+            
+            <source src="2.mp4" type="video/mp4">
+            <source src="3.mp4" type="video/mp4">
+        </div>
+        <button class="button right" id="nextBtn" onclick="nextImage()">&#10095;</button>
+        <div class="dots">
+            <div class="dot" onclick="selectImage(0)"></div>
+            <div class="dot" onclick="selectImage(1)"></div>
+            <div class="dot" onclick="selectImage(2)"></div>
+        </div>
+    </div>
+    <div class="rangi">
+        <h2>Moje rangi w CS2:</h2>
+        <h3>Ranga na trybie gry Wingman: <span style="color: #f1c40f;">Gold Nova 1</span></h3>
+        <h3>Ranga na trybie Premier (ELO): <span style="color: #b9f2fc;">5,120</span></h3>
+    </div>
+    <script>
+        let index = 0;
+        const slider = document.getElementById('imageSlider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+
+        function showImage() {
+            slider.style.transform = `translateX(-${index * 700}px)`;
+            updateDots();
+        }
+        function prevImage() {
+            if (index > 0) {
+                index--;
+                showImage();
+            }
+        }
+        function nextImage() {
+            if (index < 2) {
+                index++;
+                showImage();
+            }
+        }
+        function updateDots() {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+        updateDots(); // Set initial dot state
+
+    </script>
+</body>

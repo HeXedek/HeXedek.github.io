@@ -1,0 +1,119 @@
+
+body {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  background-color: rgb(10,10,11);
+  color: white;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+.e1313 p1{
+    background-clip: text;
+    overflow: hidden;
+    position:absolute;
+    text-wrap: nowrap;
+    font-size:60px;
+    font-weight: 800;
+    left:50px; 
+    top: 40px;
+}
+.e1313 h2{
+    overflow: hidden;
+    position:absolute;
+    text-wrap: wrap;
+    font-size: 20px;
+    font-weight: 400;
+    left:50px; 
+    top: 100px;
+}
+.e1313 h3 {
+    left:42px;
+    position: relative;
+    top: 177px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.container {
+    width: 700px;
+    height: 100%;
+    top: 170px;
+    left:42px; 
+    
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7); /* Make the button more visible */
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the images */
+}
+.image-container {
+    display: flex;
+    width: 300%; /* Make sure it accounts for all images */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    white-space: nowrap;
+    width: 700px;
+}
+.image-container video {
+    width: 700px; /* Ensure each image fits inside the container */
+    height: 100%;
+    object-fit: cover;
+}
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.left {
+    left: 10px;
+}
+.right {
+    right: 10px;
+}
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dot.active {
+    background: white;
+}
+
+.rangi{
+    left:42px;
+    position: relative;
+    top: 177px;
+    font-size: 21px;
+    font-weight: 700;
+    width: 100%;
+}
+
