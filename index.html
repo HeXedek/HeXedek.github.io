@@ -39,6 +39,7 @@
     </div>
     <script>
         let index = 0;
+        let videos = document.querySelectorAll('video');
         const slider = document.getElementById('imageSlider');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
@@ -46,6 +47,9 @@
 
         function showImage() {
             slider.style.transform = `translateX(-${index * 700}px)`;
+            videos.forEach(function(video) {
+                video.pause();
+            });
             updateDots();
         }
         function prevImage() {
