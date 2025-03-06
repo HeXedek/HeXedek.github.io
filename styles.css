@@ -21,7 +21,7 @@ body {
 .e1313 h2{
     overflow: hidden;
     position:absolute;
-    text-wrap: wrap;
+    text-wrap: nowrap;
     font-size: 20px;
     font-weight: 400;
     left:50px; 
